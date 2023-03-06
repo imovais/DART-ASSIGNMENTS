@@ -21,4 +21,15 @@ void main() {
     expenses['fri'] = 5000.0;
 
   print(expenses);
+
+/*
+Q2: Write a program in Dart that find the area of a circle using function.
+*/
+
+  areaofcircle(radius) {
+    double pi = 3.14159;
+    var area = pi * radius * radius;
+    return area;
+  }
+  print(areaofcircle(6));
 }
