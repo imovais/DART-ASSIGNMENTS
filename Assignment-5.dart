@@ -61,10 +61,24 @@ Q4: Write a program in Dart to reverse a String using function.
   }
   // print(reverse);
 
-// reverse_string(String string){
-//   for
-// }
+/*
+Q5: Write a program in Dart to signup user by using username, email & password
+as required fields while  phoneNumber is optional using function, call this
+function at least 3 times to create different users. Now create another
+function named as loginUser and then try to login with correct & incorrect credentials
+*/
 
-  var name1 = 'sunny';
-  print(name1[0]);
+  Map users = Map(); //Black Map
+
+  //FUNCTION FOR USER SIGN UP
+  signup(int ID, String username, String email, String password, [int phoneNumber]) {
+    users[ID] = {'Username': username, 'Email': email, 'Password': password, 'Phone Number': phoneNumber};
+    return users;
+  }
+
+  signup(1, 'Zuhaib Khan', 'zuhaib.khan1991@gmail.com', '123456');
+  signup(2, 'Ovais Khan', 'ovais@gmail.com', '55555');
+  signup(3, 'Ali Khan', 'muhammadali@gmail.com', '99999');
+
+  print(users);
 }
