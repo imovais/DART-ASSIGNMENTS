@@ -8,6 +8,7 @@ Check if "fri" exist in expanses; if exist change
  it's value to 5000.0 otherwise add 'fri' to expenses
   and set its value to 5000.0 then print expenses.
 */
+
 void main() {
   Map<String, double> expenses = {
     'sun': 3000.0,
@@ -32,7 +33,7 @@ Q2: Write a program in Dart that find the area of a circle using function.
     return area;
   }
 
-  // print(areaofcircle(6));
+   print(areaofcircle(5));
 
 /*
 Q3: Write a program in a dart that implements the Pythagorean theorem using function
@@ -71,11 +72,8 @@ function named as loginUser and then try to login with correct & incorrect crede
   Map users = Map(); //Black Map
 
   //FUNCTION FOR USER SIGN UP
-  signup(int ID, String username, String email, String password,
-      [int? phoneNumber]) {
-        
-    users[ID] = {
-      'Username': username,
+  signup(String username, String email, String password, [int? phoneNumber]) {
+    users[username] = {
       'Email': email,
       'Password': password,
       'Phone Number': phoneNumber
@@ -83,9 +81,16 @@ function named as loginUser and then try to login with correct & incorrect crede
     return users;
   }
 
-  signup(1, 'Zuhaib Khan', 'zuhaib.khan1991@gmail.com', '123456');
-  signup(2, 'Ovais Khan', 'ovais@gmail.com', '55555');
-  signup(3, 'Ali', 'Ali@gmail.com', '88888', 03423147577);
+  signup('Zuhaib Khan', 'zuhaib.khan1991@gmail.com', '123456');
+  signup('Ovais Khan', 'ovais@gmail.com', '55555');
+  signup('Ali', 'Ali@gmail.com', '88888', 03423147577);
 
-  print(users);
+  loginuser(String username) {
+    if (users.keys == username) {
+      print(users);
+    } else
+      print(users);
+  }
+
+  //print(users.keys);
 }
