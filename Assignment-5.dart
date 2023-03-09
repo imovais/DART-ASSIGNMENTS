@@ -83,9 +83,9 @@ function named as loginUser and then try to login with correct & incorrect crede
     }
 
 //FUNCTION CALL 3 TIMES AS MENTIONED
-    signup('zuhaibkhan', 'zuhaib.khan1991@gmail.com', '123456');
-    signup('ovaiskhan', 'ovais@gmail.com', '55555');
-    signup('ali', 'Ali@gmail.com', '88888', 03423147577);
+    signup('zuhaibkhan', 'zuhaib.khan1991@gmail.com', 'abc1234');
+    signup('ovaiskhan', 'ovais@gmail.com', 'pakistan1');
+    signup('ali', 'Ali@gmail.com', 'ali', 03423147577);
 
 //FUNTION FOR LOGIN USER
     login_user(String username, String password) {
@@ -100,5 +100,5 @@ function named as loginUser and then try to login with correct & incorrect crede
       print(auth);
     }
 //FUNCTION TEST
-    login_user('ovaiskhan', '55555');
+    login_user('ovaiskhan', 'pakistan1');
 }
