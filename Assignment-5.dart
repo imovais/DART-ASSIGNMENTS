@@ -33,7 +33,7 @@ Q2: Write a program in Dart that find the area of a circle using function.
     return area;
   }
 
-   print(areaofcircle(5));
+  //print(areaofcircle(5));
 
 /*
 Q3: Write a program in a dart that implements the Pythagorean theorem using function
@@ -69,28 +69,36 @@ function at least 3 times to create different users. Now create another
 function named as loginUser and then try to login with correct & incorrect credentials
 */
 
-  Map users = Map(); //Black Map
+  List users = []; //Black Map
 
-  //FUNCTION FOR USER SIGN UP
-  signup(String username, String email, String password, [int? phoneNumber]) {
-    users[username] = {
-      'Email': email,
-      'Password': password,
-      'Phone Number': phoneNumber
-    };
-    return users;
-  }
+//FUNCTION FOR USER SIGN UP
+    signup(String username, String email, String password, [int? phoneNumber]) {
+      var user = {
+        'Username': username,
+        'Email': email,
+        'Password': password,
+        'Phone Number': phoneNumber
+      };
+      users.add(user);
+    }
 
-  signup('Zuhaib Khan', 'zuhaib.khan1991@gmail.com', '123456');
-  signup('Ovais Khan', 'ovais@gmail.com', '55555');
-  signup('Ali', 'Ali@gmail.com', '88888', 03423147577);
+//FUNCTION CALL 3 TIMES AS MENTIONED
+    signup('zuhaibkhan', 'zuhaib.khan1991@gmail.com', '123456');
+    signup('ovaiskhan', 'ovais@gmail.com', '55555');
+    signup('ali', 'Ali@gmail.com', '88888', 03423147577);
 
-  loginuser(String username) {
-    if (users.keys == username) {
-      print(users);
-    } else
-      print(users);
-  }
-
-  //print(users.keys);
+//FUNTION FOR LOGIN USER
+    login_user(String username, String password) {
+      String auth = '';
+      for (var i in users) {
+        if (i['Username'] == username && i['Password'] == password) {
+          auth = '===========Login Successful=====================';
+          break;
+        } else
+          auth = '============Invalid Username or Passowrd========';
+      }
+      print(auth);
+    }
+//FUNCTION TEST
+    login_user('ovaiskhan', '55555');
 }
