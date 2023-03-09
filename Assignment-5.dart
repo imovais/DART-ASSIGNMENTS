@@ -21,7 +21,7 @@ void main() {
   } else
     expenses['fri'] = 5000.0;
 
-  //print(expenses);
+  print(expenses);
 
 /*===============================================================================
 Q2: Write a program in Dart that find the area of a circle using function.
@@ -30,10 +30,10 @@ Q2: Write a program in Dart that find the area of a circle using function.
   areaofcircle(radius) {
     double pi = 3.14159;
     var area = pi * radius * radius;
-    return area;
+    print('Radius $radius The Area of Circle is $area');
   }
 
-  //print(areaofcircle(5));
+  areaofcircle(5);
 
 /*=================================================================================
 Q3: Write a program in a dart that implements the Pythagorean theorem using function
@@ -44,23 +44,25 @@ Q3: Write a program in a dart that implements the Pythagorean theorem using func
     int b_square = b * b;
     var c_square = a_square + b_square;
     var c = c_square * 0.5 * 0.5;
-    return c;
+
+    print('a is $a & b is $b and using Pythagorean Theoram c is $c');
   }
 
-  ;
-//  print(pythagoren_theorem(5, 5));
+  (pythagoren_theorem(5, 5));
 
 /*================================================================================
 Q4: Write a program in Dart to reverse a String using function.
 */
+  reverse_string(String text) {
+    String reverse = "";
 
-  String name = 'Muhammad Ovais Khan';
-  String reverse = "";
-
-  for (var i = name.length - 1; i > -1; i--) {
-    reverse = reverse + name[i];
+    for (var i = text.length - 1; i > -1; i--) {
+      reverse = reverse + text[i];
+    }
+    print(reverse);
   }
-  // print(reverse);
+
+  reverse_string('Muhammad ovais Khan');
 
 /*===================================================================================
 Q5: Write a program in Dart to signup user by using username, email & password
@@ -69,7 +71,7 @@ function at least 3 times to create different users. Now create another
 function named as loginUser and then try to login with correct & incorrect credentials
 */
 
-  List users = []; //Black Map
+  List users = []; //Blank List
 
 //>>FUNCTION FOR USER SIGN UP
   signup(String username, String email, String password, [int? phoneNumber]) {
@@ -100,7 +102,7 @@ function named as loginUser and then try to login with correct & incorrect crede
     print(auth);
   }
 //>>>FUNCTION TEST
-  // login_user('ovaiskhan', 'pakistan1');
+   login_user('ovaiskhan', 'pakistan1');
 
 /*=====================================================================================
 Q6:  Write a program in Dart to calculate power of a certain numbers using function only.
@@ -114,7 +116,7 @@ Q6:  Write a program in Dart to calculate power of a certain numbers using funct
     return result;
   }
 
-//  print(power_of_number(2, 4));
+  print(power_of_number(2, 4));
 
 /* =================================================================================
 Q7: Write a function to calculate number of vowels and consonant in a String.
@@ -133,10 +135,8 @@ Q7: Write a function to calculate number of vowels and consonant in a String.
       }
     }
     var consonant = text.length - count;
-    print('No of Vowels $count');
-    print('No of Consonant $consonant');
+    print('in ( $text ) No of Vowels are $count & consonant are $consonant');
   }
 
   count_vowels('Muhammad Ovais Khan');
-
 } //Main
