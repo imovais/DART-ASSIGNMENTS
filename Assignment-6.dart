@@ -28,4 +28,18 @@ Expected String -> ehllo
   }
 
   print(alphabetical_order('hello'));
+
+/*
+Q3: Write a Dart function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.
+Example string : the quick brown fox
+Expected Output : The Quick Brown Fox
+ */
+
+  firstletter(String Sentance) {
+    var splitted = Sentance.split(" ");
+    var upercase = splitted.firstWhere((element) => false).toUpperCase();
+    print(upercase);
+  }
+
+  firstletter('the quick brown fox');
 }//main
