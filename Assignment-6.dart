@@ -14,4 +14,18 @@ void main(List<String> args) {
   }
 
   print(check_palindrome('Mom'));
+
+/*
+Q2: Write a Dart function that returns a passed string with letters in alphabetical orders.
+Example String -> hello
+Expected String -> ehllo
+ */
+
+  alphabetical_order(String word) {
+    var words = word.split('');
+    words.sort();
+    return words.join();
+  }
+
+  print(alphabetical_order('hello'));
 }//main
